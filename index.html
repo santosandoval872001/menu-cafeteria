@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vebo Coffee · Menú</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Barlow:wght@400;500;600&family=Caveat:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="img/logo.png" alt="Vebo Coffee: bulldog francés con lentes y un vaso de café">
+    <div class="note">Good<br>coffee<br>good<br>people</div>
+  </header>
+
+  <div class="bar">
+    <div class="bar-in">
+      <div class="chips" id="chips" role="group" aria-label="Categorías"></div>
+      <div class="tools">
+        <input id="q" type="search" placeholder="Buscar..." aria-label="Buscar en el menú">
+        <div class="temp" id="temp" role="group" aria-label="Temperatura"><i></i>
+          <button data-t="hot" aria-pressed="true">Caliente</button><button data-t="cold"
+            aria-pressed="false">Frío</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="menu"></main>
+  <footer>Good coffee, good people.</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

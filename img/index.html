@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vebo Coffee · Menú</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Barlow:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#efe5de; --ink:#2b3a2f; --brush:#d8c8b8; --line:#c9b8a8; --muted:#5d675f;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#1f2a22; --ink:#efe5de; --brush:#34443a; --line:#46574b; --muted:#b9c1b8; }
+}
+:root[data-theme="dark"]{ --bg:#1f2a22; --ink:#efe5de; --brush:#34443a; --line:#46574b; --muted:#b9c1b8; }
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:var(--bg);color:var(--ink);font-family:'Barlow',system-ui,sans-serif;line-height:1.4}
+img{max-width:100%;display:block}
+.logo-img,.photo{mix-blend-mode:multiply}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo-img,:root:not([data-theme="light"]) .photo{mix-blend-mode:normal;border-radius:14px}}
+
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px 56px;padding:40px 20px 24px;max-width:1080px;margin:auto}
+.logo-img{width:min(340px,80vw)}
+.note{font-family:'Caveat',cursive;font-size:2rem;line-height:1.1;text-align:center;padding:26px 30px;background:var(--brush);transform:rotate(3deg);box-shadow:0 6px 14px rgba(0,0,0,.12);position:relative}
+.note::before{content:"";position:absolute;top:-12px;left:50%;width:70px;height:22px;margin-left:-35px;background:rgba(255,255,255,.45);transform:rotate(-2deg)}
+.note::after{content:"";display:block;width:60%;height:2px;background:var(--ink);margin:10px auto 0}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:10px 16px;justify-content:center}
+nav a{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;color:var(--ink);text-decoration:none;padding:6px 14px;white-space:nowrap;border-radius:3px}
+nav a:hover,nav a:focus-visible{background:var(--brush);outline:none}
+nav a:focus-visible{outline:2px solid var(--ink)}
+
+main{max-width:1080px;margin:auto;padding:32px 20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.col{display:flex;flex-direction:column;gap:34px}
+.col + .col{border-left:1px solid var(--line);padding-left:56px}
+@media (max-width:820px){main{grid-template-columns:1fr}.col + .col{border:0;padding:0;margin-top:34px}}
+
+h2{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.7rem;letter-spacing:.01em;display:inline-block;padding:4px 18px 2px 12px;margin-left:-12px;background:var(--brush);border-radius:6px 22px 8px 26px / 10px 6px 12px 8px;margin-bottom:14px}
+h2 small{font-size:.9rem;font-weight:500}
+ul{list-style:none;padding:0}
+.item{display:flex;align-items:baseline;gap:10px;padding:5px 0;text-transform:uppercase;letter-spacing:.04em;font-weight:500}
+.item .dots{flex:1;border-bottom:1px solid var(--line);transform:translateY(-4px)}
+.item .price{font-weight:600}
+.sub{font-size:.9rem;color:var(--muted);text-transform:none;letter-spacing:0;margin-top:-2px;padding-bottom:6px}
+
+.sig{display:grid;grid-template-columns:1fr 96px;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.sig:first-of-type{border-top:0}
+.sig .head{display:flex;justify-content:space-between;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;font-size:1.15rem;letter-spacing:.03em}
+.sig p{color:var(--muted);font-size:.95rem;margin-top:4px}
+.sig img{width:96px}
+
+.feature{display:grid;grid-template-columns:1fr 150px;gap:16px;align-items:center}
+.cup{width:220px;margin:6px 0 0}
+
+.extras{display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--ink);border-radius:14px;overflow:hidden}
+.extras > div{padding:14px 16px}
+.extras > div + div{border-left:1.5px solid var(--ink);text-align:center}
+.extras h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.05rem;margin-bottom:6px}
+.extras .hint{font-size:.9rem;color:var(--muted)}
+
+footer{background:#2b3a2f;color:#efe5de;text-align:center;font-size:.8rem;letter-spacing:.4em;text-transform:uppercase;padding:14px 10px calc(14px + env(safe-area-inset-bottom,0px))}
+</style>
+</head>
+<body>
+<header>
+  <img class="logo-img" src="img/logo.png" alt="Vebo Coffee: bulldog francés con lentes y un vaso de café">
+  <div class="note">Good<br>coffee<br>good<br>people</div>
+</header>
+
+<nav id="nav" aria-label="Secciones del menú"></nav>
+
+<main>
+  <div class="col" id="left"></div>
+  <div class="col" id="right"></div>
+</main>
+
+<footer>Good coffee, good people.</footer>
+
+<script>
+// ---- EDITA AQUÍ precios y productos ----
+const IMG = {
+  coco:"img/coco.jpg", lottus:"img/lottus.jpg", pink:"img/pink.jpg", vanilla:"img/vanilla.jpg",
+  cup:"img/cup.jpg", croissant:"img/croissant.jpg", cake:"img/cake.jpg"
+};
+
+const MENU = {
+  calientes: { title:"Bebidas calientes", items:[
+    ["Espresó",25],["Americano",35],["Latte",50],["Caramel latte",55],["Cappuccino",50],
+    ["Moka",55],["Chai latte",60],["Matcha latte",55],["Chocolate",60]
+  ]},
+  frias: { title:"Bebidas frías", note:"(a las rocas)", items:[
+    ["Americano",40],["Latte",50],["Caramel latte",55],["Moka",55],["Chai latte",60],["Matcha latte",60]
+  ]},
+  frappeado: { title:"Frappeado", items:[["Clásico · Vainilla · Moka · Caramelo",65]] },
+  especiales: { title:"Especiales", items:[["Oreo",70],["Lottus",70],["Nutella",70]] },
+  signature: { title:"Signature drinks", items:[
+    {n:"Coco Matcha", p:70, d:"Agua de coco y foam cremoso de matcha.", i:"coco"},
+    {n:"Latte de Lottus", p:70, d:"Latte con salsa Lottus, foam cremoso de café y crumble de galleta Lottus.", i:"lottus"},
+    {n:"Pink Velvet", p:70, d:"Moka blanco con espuma cremosa de Red Velvet y crumble de Red Velvet.", i:"pink"},
+    {n:"Vanilla Dream", p:70, d:"Latte con foam cremoso de vainilla y un toque de canela o cacao.", i:"vanilla"}
+  ]},
+  croissants: { title:"Croissants", items:[["Jamón y queso",65]], img:"croissant" },
+  rebanadas: { title:"Rebanadas", items:[["Rebanadas",55]], img:"cake" }
+};
+const GALLETAS = [["Nutella",35],["Redvelvet",35]];
+// ----------------------------------------
+
+const $ = id => document.getElementById(id);
+const money = n => "$" + n;
+
+function list(items){
+  return "<ul>" + items.map(([n,p]) =>
+    `<li class="item"><span>${n}</span><span class="dots"></span><span class="price">${money(p)}</span></li>`).join("") + "</ul>";
+}
+function title(key, extra=""){
+  const s = MENU[key];
+  return `<h2>${s.title} ${s.note ? `<small>${s.note}</small>` : ""}</h2>`;
+}
+function section(key, body){ return `<section id="${key}">${body}</section>`; }
+
+const left = [
+  section("calientes", title("calientes") + list(MENU.calientes.items) +
+    `<img class="photo cup" src="${IMG.cup}" alt="Taza de latte art Vebo Coffee">`),
+  section("frias", title("frias") + list(MENU.frias.items)),
+  section("frappeado", title("frappeado") + list(MENU.frappeado.items)),
+  section("especiales", title("especiales") + list(MENU.especiales.items)),
+  `<div class="extras">
+    <div><h3>Galletas NY</h3>${list(GALLETAS)}</div>
+    <div><h3>Pan del día</h3><p class="hint">Pregunta por la variedad disponible</p></div>
+  </div>`
+];
+
+const sig = MENU.signature.items.map(d =>
+  `<article class="sig"><div><div class="head"><span>${d.n}</span><span>${money(d.p)}</span></div><p>${d.d}</p></div>
+   <img class="photo" src="${IMG[d.i]}" alt="${d.n}" loading="lazy"></article>`).join("");
+
+const feature = key => section(key, title(key) +
+  `<div class="feature">${list(MENU[key].items)}<img class="photo" src="${IMG[MENU[key].img]}" alt="${MENU[key].title}" loading="lazy"></div>`);
+
+const right = [
+  section("signature", title("signature") + sig),
+  feature("croissants"),
+  feature("rebanadas")
+];
+
+$("left").innerHTML = left.join("");
+$("right").innerHTML = right.join("");
+$("nav").innerHTML = Object.keys(MENU).filter(k => !["frappeado","especiales"].includes(k))
+  .map(k => `<a href="#${k}">${MENU[k].title}</a>`).join("");
+</script>
+</body>
+</html>
